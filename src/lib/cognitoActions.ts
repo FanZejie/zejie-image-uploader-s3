@@ -73,12 +73,17 @@ export async function handleSignIn(
   prevState: string | undefined,
   formData: FormData
 ) {
-  let redirectLink = "/dashboard";
+  console.log("handleSignIn");
+  let redirectLink = "/upload";
   try {
     const { isSignedIn, nextStep } = await signIn({
       username: String(formData.get("email")),
       password: String(formData.get("password")),
     });
+    if(isSignedIn){
+      console.log("Signed in",isSignedIn);
+      console.log("Signed in",nextStep);
+    }
     if (nextStep.signInStep === "CONFIRM_SIGN_UP") {
       await resendSignUpCode({
         username: String(formData.get("email")),

@@ -7,7 +7,7 @@ import {
 
 import { handleSendEmailVerificationCode } from "@/lib/cognitoActions";
 import { useFormState, useFormStatus } from "react-dom";
-import { Button } from "../button";
+import { Button } from "./button";
 
 export default function SendVerificationCode() {
   const [response, dispatch] = useFormState(handleSendEmailVerificationCode, {
