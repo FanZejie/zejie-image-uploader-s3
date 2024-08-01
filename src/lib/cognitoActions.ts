@@ -74,7 +74,7 @@ export async function handleSignIn(
   formData: FormData
 ) {
   console.log("handleSignIn");
-  let redirectLink = "/upload";
+  let redirectLink = "/dashboard";
   try {
     const { isSignedIn, nextStep } = await signIn({
       username: String(formData.get("email")),

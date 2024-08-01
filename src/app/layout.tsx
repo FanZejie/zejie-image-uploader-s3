@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from 'next/font/google'
 import ConfigureAmplifyClientSide from "./amplify-cognito-config";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto_init = Roboto({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-roboto',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-       <body className={`${inter.className} antialiased`}>
+       <body className={`${roboto_init.variable} antialiased`}>
         <>
           <ConfigureAmplifyClientSide />
           {children}
