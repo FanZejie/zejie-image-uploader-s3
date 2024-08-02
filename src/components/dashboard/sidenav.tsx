@@ -1,10 +1,12 @@
-
+"use client";
+import useAuthUser from "@/app/hooks/use-auth-user";
 import Link from "next/link";
 import NavLinks from "@/components/dashboard/navLinks";
 import AcmeLogo from "@/components/AcmeLogo";
 import LogoutForm from "@/components/dashboard/logoutForm";
 
 export default function SideNav() {
+  const user = useAuthUser();
   return (
     <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <Link
@@ -12,12 +14,16 @@ export default function SideNav() {
         href="/"
       >
         <div className="w-32 text-white md:w-40">
+        <p>name:{user?.name}</p>
+
+          <p>email:{user?.email}</p>
           <AcmeLogo />
         </div>
       </Link>
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
         <NavLinks />
         <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
+        
         <LogoutForm />
       </div>
     </div>
