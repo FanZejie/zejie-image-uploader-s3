@@ -19,13 +19,13 @@ export default function NavLinks() {
     { name: "Home", href: "/dashboard", icon: HomeIcon },
     {
       name: "upload",
-      href: "/upload",
+      href: "/dashboard/upload",
       icon: DocumentDuplicateIcon,
     },
     { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
   ];
   const pathname = usePathname();
-  
+
   if (user && user.isAdmin) {
     links.push({
       name: "Admin Area",
