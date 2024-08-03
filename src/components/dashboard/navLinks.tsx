@@ -17,6 +17,16 @@ export default function NavLinks() {
   const links = [
     { name: "Home", href: "/dashboard", icon: HomeIcon },
     {
+      name: "visa board",
+      href: "/dashboard/visa",
+      icon: DocumentDuplicateIcon,
+    },
+    {
+      name: "topo graph",
+      href: "/dashboard/topo",
+      icon: DocumentDuplicateIcon,
+    },
+    {
       name: "upload",
       href: "/dashboard/upload",
       icon: DocumentDuplicateIcon,
