@@ -1,7 +1,6 @@
 "use client";
 import useAuthUser from "@/app/hooks/use-auth-user";
 import {
-  UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
   BuildingOfficeIcon,
@@ -22,7 +21,7 @@ export default function NavLinks() {
       href: "/dashboard/upload",
       icon: DocumentDuplicateIcon,
     },
-    { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
+   
   ];
   const pathname = usePathname();
 
