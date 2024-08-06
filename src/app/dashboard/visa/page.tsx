@@ -1,3 +1,7 @@
+import React from 'react';
+import { Button } from 'antd';
+import VisaTable from '@/components/visa/visaTable';
+
 export default function Visa() {
   return (
     <>
@@ -10,7 +14,9 @@ export default function Visa() {
         For example, how many people have been approved today, what are their
         majors, and when did they submit their visas? Based on this information,
         you can guess how long it will take for your visa to be approved.
-      </p>
+      </p><Button type="primary">Upload File</Button>
+
+      <VisaTable/>
     </>
   );
 }
